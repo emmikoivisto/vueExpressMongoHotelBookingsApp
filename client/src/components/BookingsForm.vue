@@ -12,7 +12,7 @@
 
 <script>
 import { eventBus } from '../main.js';
-import bookingServices from '../../services/bookingServices.js'
+import bookingServices from '../../services/bookingServices.js';
 
 export default {
   name: 'bookings-form',
@@ -20,7 +20,7 @@ export default {
     return {
       name: "",
       email: "",
-      checked_in: null
+      checked_in: false
     }
   },
   methods: {
@@ -34,7 +34,7 @@ export default {
       .then(res => eventBus.$emit('added-booking', res));
       this.name = ""
       this.email = ""
-      this.checked_in = null
+      this.checked_in = false
     }
 
   }
