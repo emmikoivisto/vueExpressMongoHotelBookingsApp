@@ -1,6 +1,5 @@
 <template>
   <main>
-    <h1>Hotel bookings</h1>
     <bookings-form></bookings-form>
     <bookings-grid :bookings="bookings"></bookings-grid>
   </main>
